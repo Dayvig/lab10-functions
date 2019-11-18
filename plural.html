@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function plural(s){
+        switch (s){
+          case "moose":
+            return "moose";
+          case "fish":
+            return "fish";
+          case "automaton":
+            return "automata";
+          case "mouse":
+            return "mice";
+          default:
+            return s+"s";
+        }
+      }
+      var input = prompt("Enter a word to pluralize:");
+      document.write(plural(input));
+    </script>
+  </body>
+</html>

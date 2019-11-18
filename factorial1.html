@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function factorial(n){
+        num = parseInt(n, 10);
+        var sum = num;
+        for (var i=num-1;i>0;i--){
+          sum *= i;
+          console.log(sum);
+        }
+        return sum;
+      }
+      var input = prompt("Enter a number: ");
+      document.write(input+"! ="+factorial(input));
+    </script>
+  </body>
+</html>
