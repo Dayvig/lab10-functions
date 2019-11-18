@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var recurse = 1;
+    var randomVar = 0;
+    var min = -3;
+    var maxx = 3;
+
+
+function randomInRange(min, maxx) {
+        min = Math.ceil(min); // rounds a number UP to the next largest whole number or integer
+        maxx = Math.floor(maxx); // rounds a number DOWN to the previous largest whole number or integer
+        return Math.floor(Math.random() * (maxx - min) + min);
+}
+function randomWalk(){
+  while (recurse > 20){ return; }
+    randomVar = randomInRange(randomVar+min, randomVar+maxx);
+    document.write(randomVar+"<br>");
+    recurse++;
+    randomWalk();
+}
+
+    randomWalk();
+
+    </script>
+  </body>
+</html>
